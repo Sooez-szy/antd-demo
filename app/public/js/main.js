@@ -12,7 +12,7 @@ import {QuestionFormList} from './QuestionFormList';
 import {AntForm} from './AntForm';
 import {AntForm2} from './AntForm2';
 import _ from 'lodash';
-console.log(consoleStr)
+//console.warn(consoleStr)
 class App extends React.Component {
     constructor(props) {
         super(props);
