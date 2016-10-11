@@ -3,10 +3,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Row, Col} from 'antd';
-import {Button} from 'antd';
-import {Icon} from 'antd';
-import {Input} from 'antd';
+import {Button,Input,Icon,Row, Col} from 'antd';
 import '../css/bootstrap.min.css';
 import '../css/index.css';
 import {QuestionForm} from './QuestionForm';
