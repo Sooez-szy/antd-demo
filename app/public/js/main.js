@@ -3,13 +3,16 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Button,Input,Icon,Row, Col} from 'antd';
+import {Button, Input, Icon, Row, Col} from 'antd';
 import '../css/bootstrap.min.css';
 import '../css/index.css';
+import {consoleStr} from './console'
 import {QuestionForm} from './QuestionForm';
 import {QuestionFormList} from './QuestionFormList';
+import {AntForm} from './AntForm';
+import {AntForm2} from './AntForm2';
 import _ from 'lodash';
-
+console.log(consoleStr)
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -17,7 +20,7 @@ class App extends React.Component {
             formDisplayed: false,
             question: [{
                 key: 1,
-                title: '产品经理与程序员矛盾的本质是什么？',
+                title: '测试1',
                 description: '理性探讨，请勿撕逼。产品经理的主要工作职责是产品设计。接受来自其他部门的需求，经过设计后交付研发。但这里有好些职责不清楚的地方。',
                 voteCount: 10,
             }]
@@ -53,8 +56,8 @@ class App extends React.Component {
      * 问题集合排序方法
      * @param (Collection) qsts 问题集合
      */
-    sortQuestion(qsts){
-        var newQuestions = _.orderBy(qsts,'voteCount','desc')
+    sortQuestion(qsts) {
+        var newQuestions = _.orderBy(qsts, 'voteCount', 'desc')
         return newQuestions;
     }
 
@@ -66,7 +69,7 @@ class App extends React.Component {
     onVote(key, newCount) {
         let questions = _.uniq(this.state.question);
         //通过新增问题
-        let index = _.findIndex(questions,(qst)=>{
+        let index = _.findIndex(questions, (qst)=> {
             return qst.key == key;
         });
         questions[index].voteCount = newCount;
@@ -90,6 +93,8 @@ class App extends React.Component {
                                   onNewQuestion={this.onNewQuestion.bind(this)}/>
                     <QuestionFormList question={this.state.question} onVote={this.onVote.bind(this)}/>
                 </div>
+                <AntForm />
+                <AntForm2 />
             </div>
         )
     }
