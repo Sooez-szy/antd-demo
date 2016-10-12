@@ -11,6 +11,7 @@ import {QuestionForm} from './QuestionForm';
 import {QuestionFormList} from './QuestionFormList';
 import {AntForm} from './AntForm';
 import {AntForm2} from './AntForm2';
+import {AntForm3} from './AntForm3';
 import _ from 'lodash';
 //console.warn(consoleStr)
 class App extends React.Component {
@@ -95,6 +96,7 @@ class App extends React.Component {
                 </div>
                 <AntForm />
                 <AntForm2 />
+                <AntForm3 />
             </div>
         )
     }
