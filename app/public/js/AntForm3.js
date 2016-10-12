@@ -61,10 +61,9 @@ export class AntForm3 extends React.Component{
         };
         return (
             <div className="main container" style={{marginTop:50+'px'}}>
-                <h5 style={{marginBottom:20+'px'}}>表单验证：</h5>
                 <Form horizontal style={{maxWidth:480+'px'}}>
                     {/*用户名及验证*/}
-                    <FormItem {...formItemLayout} label='用户名' hasFeedback help={isFieldValidating('username') ? 'validating...' : (getFieldError('username') || []).join(', ')}>
+                    <FormItem {...formItemLayout} label='用户名' hasFeedback help={isFieldValidating('username') ? '验证中...' : (getFieldError('username') || []).join(', ')}>
                         {getFieldDecorator('username',{
                             rules: [
                                 { required: true, min: 5, message: '用户名最少五个字符...' },

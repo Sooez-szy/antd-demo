@@ -9,9 +9,7 @@ import '../css/index.css';
 import {consoleStr} from './console'
 import {QuestionForm} from './QuestionForm';
 import {QuestionFormList} from './QuestionFormList';
-import {AntForm} from './AntForm';
-import {AntForm2} from './AntForm2';
-import {AntForm3} from './AntForm3';
+import {MyTab} from './Tabs';
 import _ from 'lodash';
 //console.warn(consoleStr)
 class App extends React.Component {
@@ -94,9 +92,7 @@ class App extends React.Component {
                                   onNewQuestion={this.onNewQuestion.bind(this)}/>
                     <QuestionFormList question={this.state.question} onVote={this.onVote.bind(this)}/>
                 </div>
-                <AntForm />
-                <AntForm2 />
-                <AntForm3 />
+                <MyTab />
             </div>
         )
     }

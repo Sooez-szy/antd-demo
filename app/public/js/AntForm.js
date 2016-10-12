@@ -15,7 +15,6 @@ export class AntForm extends React.Component{
         const { getFieldDecorator } = this.props.form;
         return (
             <div className="main container" style={{marginTop:50+'px'}}>
-                <h5 style={{marginBottom:20+'px'}}>平行排列表单：</h5>
                 <Form inline onSubmit={this.handleSubmit.bind(this)}>
                     <FormItem label="账号">
                         {/*为input设置键值为username,默认值为szy*/}

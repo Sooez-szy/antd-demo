@@ -21,7 +21,6 @@ export class AntForm2 extends React.Component{
         }
         return(
             <div className="main container" style={{marginTop:50+'px'}}>
-                <h5 style={{marginBottom:20+'px'}}>垂直排列表单：</h5>
                 <Form horizontal style={{maxWidth:480+'px'}} onSubmit={this.handleSubmit.bind(this)}>
                     <FormItem {...formItemLayout} label="用户名">
                         {getFieldDecorator('user',{initialValue:'szy'})(
